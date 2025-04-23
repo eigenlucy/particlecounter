@@ -22,6 +22,7 @@ module ParticleCounter:
     R2 = new Resistor; R2.value = 15kohm +/- 5%; R2.package = "R0201"
     R2.p1 ~ opamp.IN1plus; R2.p2 ~ power.gnd
     C3 = new Capacitor; C3.value = 100nF +/-20%; C3.package = "C0402"
+    C3.p1 ~ power.vcc; C3.p2 ~ power.gnd
     R3 = new Resistor; R3.value = 40Mohm +/- 5%; R3.package = "R0201"
     R3.p1 ~ pd_out; R3.p2 ~ opamp.OUT1
     C1 = new Capacitor; C1.value = 5pF +/- 5%; C1.package = "C0402"
